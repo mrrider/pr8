@@ -10,6 +10,6 @@ public class JdbcTestApplication {
 		ApplicationContext context = new ClassPathXmlApplicationContext("SpringBeans.xml");
 		WorkWithStudents worker = (WorkWithStudents) context.getBean("worker");
 		Student student = new Student("kozak", 3);
-		worker.saveStudentToDb(student);
+		worker.update(student);
 	}
 }
